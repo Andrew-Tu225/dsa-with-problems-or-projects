@@ -17,7 +17,7 @@ is not zero and do the swap when zero_index is different from iterating index
 """
 
 
-def move_zero(array:list[int]):
+def move_zero(array:list[int]) -> list[int]:
     if 0 not in array or array.index(0)==len(array)-1:
         return array
     else:
@@ -42,3 +42,8 @@ def optimized_move_zero(array:list[int]):
             zero_index += 1
     return array
 
+
+if __name__=="__main__":
+    array = [1,2,4,0,1,2,3,0,2,0,0,3]
+    print("output from move_zero function: ", move_zero(array))
+    print("output from optimized_move_zero function: ", optimized_move_zero(array))

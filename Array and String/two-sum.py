@@ -10,7 +10,7 @@ target = 6
 output:[0,3]
 """
 
-def two_sum(array:list[int], target:int):
+def two_sum(array:list[int], target:int) -> list[int]:
     map = dict()
     for i, val in enumerate(array):
         if val in map:
