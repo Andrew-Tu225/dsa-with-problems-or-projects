@@ -1,5 +1,6 @@
 from linkedList import LinkedList
 from node import Node
+from print_linked_list import print_linkList_item
 
 def reverse_linkedList(linkedList:LinkedList):
     prev = None
@@ -14,15 +15,6 @@ def reverse_linkedList(linkedList:LinkedList):
     linkedList.first = prev
 
     return linkedList
-
-def print_linkList_item(linkedList:LinkedList):
-    current_node = linkedList.first
-    while current_node is not None:
-        if current_node.next is not None:
-            print(f"{current_node.item} --> ", end="")
-        else:
-            print(current_node.item)
-        current_node = current_node.next
 
 
 if __name__ == "__main__":
